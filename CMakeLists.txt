@@ -15,7 +15,7 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (hello_world_cli "main.cpp" "main.h")
+add_executable (hello_world_cli "main.cpp")
 
 add_library(hello_world "lib.cpp" "lib.h")
 
