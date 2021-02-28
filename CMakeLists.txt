@@ -21,7 +21,7 @@ add_executable(test_version "test_version.cpp")
 set_target_properties(hello_world_cli hello_world test_version PROPERTIES 
 CXX_STANDARD 17
 CXX_STANDARD_REQUIRED ON
-COMPILE_OPTIONS "-Wpedantic; -Wall; -Wextra")
+COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra")
 
 set_target_properties(test_version PROPERTIES
 COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
