@@ -1,8 +1,8 @@
 ﻿// main.cpp: определяет точку входа для приложения.
 //
 
-#include "main.h"
 #include "lib.h"
+#include <iostream>
 
 int main()
 {
