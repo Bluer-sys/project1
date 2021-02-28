@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.2)
 
-project(project1 VERSION 0.0.$ENV{TRAVIS_JOB_ID})
+project(project1 VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Threads REQUIRED)
 
@@ -17,7 +17,7 @@ configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 # Добавьте источник в исполняемый файл этого проекта.
 add_executable (hello_world_cli "main.cpp")
 
-add_library(hello_world "lib.cpp" "lib.h")
+add_library(hello_world "lib.cpp")
 
 add_executable(test_version "test_version.cpp")
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.
