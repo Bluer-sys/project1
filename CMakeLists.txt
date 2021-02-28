@@ -10,8 +10,6 @@ find_package(Threads REQUIRED)
 #====================================================
 # отвечает за тип желаемой линковки
 set(Boost_USE_STATIC_LIBS   ON)
-# многопоточная/однопоточная версии компонент(необяз.)
-set(Boost_USE_MULTITHREADED ON)
 #====================================================
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
