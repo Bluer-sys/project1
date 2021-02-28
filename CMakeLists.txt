@@ -1,7 +1,4 @@
-﻿# CMakeList.txt: проект CMake для CMakeProject1; включите исходный код и определения,
-# укажите здесь логику для конкретного проекта.
-#
-cmake_minimum_required (VERSION 3.2)
+﻿cmake_minimum_required (VERSION 3.2)
 
 project(project1 VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
@@ -14,13 +11,12 @@ set(Boost_USE_STATIC_LIBS   ON)
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
-# Добавьте источник в исполняемый файл этого проекта.
+
 add_executable (hello_world_cli "main.cpp")
 
 add_library(hello_world "lib.cpp")
 
 add_executable(test_version "test_version.cpp")
-# TODO: Добавьте тесты и целевые объекты, если это необходимо.
 
 set_target_properties(hello_world_cli hello_world test_version PROPERTIES 
 CXX_STANDARD 17
